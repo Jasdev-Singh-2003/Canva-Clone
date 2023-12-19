@@ -44,6 +44,46 @@
   font-family: inter;
   src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
 }
+
+@font-face {
+  font-family: bodoni;
+  src: url(assets/fonts/BodoniModa-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+  font-family: hammersmith;
+  src: url(assets/fonts/HammersmithOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: playfair;
+  src: url(assets/fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: gagalin;
+  src: url(assets/fonts/Gagalin-Regular.otf);
+}
+
+@font-face {
+  font-family: caveat;
+  src: url(assets/fonts/Caveat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: voga;
+  src: url(assets/fonts/CDType\ -\ Voga\ Medium.otf);
+}
+
+@font-face {
+  font-family: fira-light;
+  src: url(assets/fonts/FiraSans-Light.ttf);
+}
+
+@font-face {
+  font-family: fira-medium;
+  src: url(assets/fonts/FiraSans-Medium.ttf);
+}
 /* fonts */
 
 
@@ -268,17 +308,36 @@ h1{
   width: 100%;
   height: 32.50%;
   /* background-color: #456FDC; */
+  border-radius: 5px;
+  margin-bottom: 7.50%;
 
   overflow-x: scroll;
   justify-content: center;
   /* align-items: start; */
   flex-direction: column;
 
-  /* box-shadow: inset 0px 0px 10px 10px black; */
+  position: relative;
+}
+
+.styles-scrollable-wrappers::after{
+  content: '';
+  width: 0;
+  height: 100%;
+
+  position: sticky;
+  right: 0;
+  z-index: 10;
+
+  box-shadow: 0px 0px 10px 20px rgba(38, 38, 38, 0.650);
+  filter: blur(10px);
 }
 
 .styles-scrollable-wrappers::-webkit-scrollbar{
   display: none;
+}
+
+.height-1{
+  height: 22.50%;
 }
 
 .combination-style{
@@ -303,6 +362,31 @@ h1{
   transition: all 100ms;
 }
 
+.combination-style-height{
+  padding-bottom: 7.50px;
+  padding: 8.50px;
+}
+
+.combination-style-height div{
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  background-color: #252627;
+
+  padding: 5px;
+  padding-left: 7.50px;
+  overflow: hidden;
+
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  row-gap: 3px;
+}
+
+.combination-style-shadow div{
+  box-shadow: 0px 0px 10px 10px rgba(30, 30, 30, 0.300) inset;
+}
+
 .combination-style:hover{
   background-color: #454647;
 }
@@ -312,23 +396,55 @@ h1{
 }
 
 .color{
-  background-image: linear-gradient(to right,#C43C1E 50%, #F9F7DC 50%);
+  background-image: linear-gradient(45deg,#C43C1E 50%, #F9F7DC 50%);
   width: 100%;
   height: 65%;
 
   border-radius: 3px;
 }
 
+.color-height{
+  height: 100%;
+}
+
 .color-1{
-  background-image: linear-gradient(to right,#F6F6E9 50%, #7B3911 50%);
+  background-image: linear-gradient(45deg,#F6F6E9 50%, #7B3911 50%);
 }
 
 .color-2{
-  background-image: linear-gradient(to right,#303030 50%, #F0DFC8 50%);
+  background-image: linear-gradient(45deg,#303030 50%, #F0DFC8 50%);
 }
 
 .color-3{
-  background-image: linear-gradient(to right,#8B73FF 50%, #FFFFFF 50%);
+  background-image: linear-gradient(45deg,#8B73FF 50%, #FFFFFF 50%);
+}
+
+.color-4{
+  background-image: linear-gradient(45deg,#947F57 50%, #FFFFFF 50%);
+}
+
+.color-5{
+  background-image: linear-gradient(45deg,#FFFFFF 50%, #253439 50%);
+}
+
+.color-6{
+  background-image: linear-gradient(45deg,#7D0A0A 50%, #F3EDC8 50%);
+}
+
+.color-7{
+  background-image: linear-gradient(45deg,#001F3D 50%, #F8DCBF 50%);
+}
+
+.color-8{
+  background-image: linear-gradient(45deg,#5F8670 50%, #EEE7DA 50%);
+}
+
+.color-9{
+  background-image: linear-gradient(45deg,#393E46 50%, #00ccd7 50%);
+}
+
+.color-10{
+  background-image: linear-gradient(45deg,#F38181 50%, #355C7D 50%);
 }
 
 .combination-style h4{
@@ -337,10 +453,25 @@ h1{
   color: white;
 }
 
+.combination-style-height div h4{
+  font-size: 1.35rem;
+}
+
 .combination-style p{
   font-size: 0.70rem;
   font-weight: 400;
   color: white;
+}
+
+
+.combination-style-height div p{
+  font-size: 0.90rem;
+}
+
+.combination-style-height div span{
+  font-size: 0.65rem;
+  color: #FFFFFF;
+  font-style: normal;
 }
 
 .chunk{
@@ -375,6 +506,44 @@ h1{
   font-family: quicksand;
 }
 
+.bodoni, .bodoni-italic{
+  font-family: bodoni;
+}
+
+.bodoni-italic{
+  font-style: italic;
+}
+
+.hammersmith{
+  font-family: hammersmith;
+  letter-spacing: 2px;
+}
+
+.gagalin{
+  font-family: gagalin;
+}
+
+.playfair{
+  font-family: playfair;
+  font-style: italic;
+}
+
+.caveat{
+  font-family: caveat;
+}
+
+.voga{
+  font-family: voga;
+}
+
+.fira-light{
+  font-family: fira-light;
+}
+
+.fira-medium{
+  font-family: fira-medium;
+}
+
 .work-area-wrapper{
   width: 77.50%;
   height: 90%;
@@ -392,6 +561,8 @@ h1{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  box-shadow: 0px 0px 10px rgba(175, 175, 175, 0.200);
 }
 
 .business-card input{
@@ -400,7 +571,7 @@ h1{
 
 #card-heading{
   width: 70%;
-  height: 20%;
+  height: 25%;
   background-color: transparent;
 
   text-align: center;
