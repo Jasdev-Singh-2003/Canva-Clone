@@ -8,6 +8,27 @@
   <link rel="shortcut icon" href="assets/images/favicon/Canva-FavIcon.png" type="image/x-icon">
 </head>
 <body>
+
+  <div class="prompt-container d-flex" id="prompt-container">
+    <div class="prompt-container-2 d-flex">
+      <div class="form-container d-flex">
+        <form action="#">
+          <h1>Visiting Card</h1>
+          <h4>Brand Name</h4>
+          <input type="text" id="heading" />
+          <h4>Slogan</h4>
+          <input type="text" id="sub-heading" />
+          <h4>Loaction</h4>
+          <input type="text" id="location" />
+          <input type="submit" value="Submit" onclick="let brandName = document.getElementById('heading').value; document.getElementById('card-heading').value=(brandName); document.getElementById('prompt-container').style.display=('none')
+          let brandSlogan = document.getElementById('sub-heading').value; document.getElementById('card-sub-heading').value=(brandSlogan); 
+          let brandLocation = document.getElementById('location').value; document.getElementById('card-body').value=(brandLocation)">
+        </form>
+      </div>
+      <div class="image-wrapper"></div>
+    </div>
+  </div>
+
   <!-- <div class="loading-animation-container">
     <div class="loading-animation">
       <div class="loader"></div>
@@ -214,10 +235,12 @@
         <div class="business-card d-flex" id="business-card">
           <input type="text" id="card-heading" placeholder="Heading" value="Heading">
           <input type="text" id="card-sub-heading" placeholder="Subheading" value="Subheading">
-          <input type="text" id="card-body" placeholder="Body" value="Body">
+          <input type="text" id="card-body" placeholder="Loaction" value="Loaction">
         </div>
       </div>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
